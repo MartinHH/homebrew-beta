@@ -1,9 +1,9 @@
 
 class Cratetom3u < Formula
-  desc "Cratetom3u is a tool to convert Serato .crate files to .m3u playlist files."
+  desc "cratetom3u is a tool to convert Serato .crate files to .m3u playlist files."
   homepage "https://github.com/MartinHH/CrateToM3U"
-  url "https://github.com/MartinHH/CrateToM3U/releases/download/v0.2.0/io.github.martinhh.cratetom3u-0.2.0.jar"
-  sha256 "2caa1ae78e6c7d85c8ccfbb5b291cfd3c315f28983ad62b6a4cd7b5108529fd4"
+  url "https://github.com/MartinHH/CrateToM3U/releases/download/v0.2.1/io.github.martinhh.cratetom3u-0.2.1.jar"
+  sha256 "58285719c1e80e079d73a68dd1ef5b94973d350e2d6d0696b9817a875e53e251"
 
   depends_on :java => "1.7+"
 
