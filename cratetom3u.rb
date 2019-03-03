@@ -32,7 +32,7 @@ class Cratetom3u < Formula
 
     def create_launcher
       javaMain = "io.github.martinhh.sl.CrateToM3U"
-      (bin/"cratetom3u").write <<-EOS.undent
+      (bin/"cratetom3u").write <<~EOS
         #!/bin/bash
         exec java -cp "#{libexec}/*" #{javaMain} "$@"
       EOS
