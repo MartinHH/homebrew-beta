@@ -2,25 +2,20 @@
 class Cratetom3u < Formula
   desc "cratetom3u is a tool to convert Serato .crate files to .m3u playlist files."
   homepage "https://github.com/MartinHH/CrateToM3U"
-  url "https://github.com/MartinHH/CrateToM3U/releases/download/v0.2.1/io.github.martinhh.cratetom3u-0.2.1.jar"
-  sha256 "58285719c1e80e079d73a68dd1ef5b94973d350e2d6d0696b9817a875e53e251"
+  url "https://github.com/MartinHH/CrateToM3U/releases/download/v0.2.3/cratetom3u_2.13-0.2.3.jar"
+  sha256 "811a1e3db26ce29fdbc4eae130aed45cbe2901fe454da817767f793c0f7ce3e5"
 
-  depends_on :java => "1.7+"
+  depends_on "openjdk"
 
   resource "scallop" do
-    url "https://repo1.maven.org/maven2/org/rogach/scallop_2.11/2.0.7/scallop_2.11-2.0.7.jar"
-    sha256 "b37f2c05192b0fce5086c973c3ea47bbb95959c44a7903e341e1d7120fef70e8"
+    url "https://repo1.maven.org/maven2/org/rogach/scallop_2.13/4.0.1/scallop_2.13-4.0.1.jar"
+    sha256 "f47bf1ed84f89fe689f78a73c9acfead71ed353ed8ba1df63368f42b77a56540"
   end
 
   resource "scala-library" do
-    url "https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar"
-    sha256 "401e0f47d63221c811964534f2e480169f50919c804f728930ac6037eca4e5f6"
-  end  
-
-  resource "scala-reflect" do
-    url "https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.8/scala-reflect-2.11.8.jar"
-    sha256 "29e081446a2a35de867411e06c6bc86863ac802401f8e8826f87723f668b4319"
-  end   
+    url "https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.4/scala-library-2.13.4.jar"
+    sha256 "fbc1de27c46b46c4edaddb808f57afa2b0e016da12cb0abe4289ee69c42f2c8e"
+  end
 
   def install
 
@@ -40,7 +35,6 @@ class Cratetom3u < Formula
 
     install_resourcejar("scallop")
     install_resourcejar("scala-library")
-    install_resourcejar("scala-reflect")
 
     libexec.install Dir["*"]
 
